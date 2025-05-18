@@ -1,0 +1,274 @@
+/* Korean IT/AI News Dashboard Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-box input {
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e2e8f0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.category-btn.active {
+    background-color: #4299e1;
+    color: white;
+}
+
+.category-btn:hover:not(.active) {
+    background-color: #cbd5e0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background-color: #f0f5ff;
+    padding: 15px;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2D3748;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.infographic-icon {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infographic-icon svg {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-icon {
+    max-width: 100px;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* 인포그래픽 스타일 */
+.primary-color {
+    fill: #4299e1;
+}
+
+.secondary-color {
+    fill: #667eea;
+}
+
+.accent-color {
+    fill: #ed64a6;
+}
+
+.neutral-color {
+    fill: #718096;
+}
+
+.tech-color {
+    fill: #38b2ac;
+}
+
+.security-color {
+    fill: #e53e3e;
+}
+
+.business-color {
+    fill: #38a169;
+}
+
+.card-footer {
+    padding: 15px;
+    background-color: #f9fafb;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #3182ce;
+}
+
+.view-options {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.view-btn {
+    background-color: #e2e8f0;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.view-btn.active {
+    background-color: #4299e1;
+    color: white;
+}
+
+.view-btn:hover:not(.active) {
+    background-color: #cbd5e0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.iframe-container {
+    display: none; /* 기본적으로 숨김 */
+    height: 100vh;
+    margin-top: 20px;
+}
+
+.iframe-view .iframe-container {
+    display: block;
+}
+
+.iframe-view .grid {
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.iframe-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.iframe-nav button {
+    white-space: nowrap;
+    padding: 8px 16px;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.iframe-nav button.active {
+    background-color: #4299e1;
+    color: white;
+}
